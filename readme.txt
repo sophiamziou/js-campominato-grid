@@ -5,6 +5,4 @@ Elenco passaggi:
 
 1- visualizzare l'elemento al click del bottone
 2- creare la griglia 10x10 
-3- SE clicco sulla cella 
-    si colora 
-    visualizzo il numero in console
+3- cliccando sulle celle si colorano e compare il numero in console
