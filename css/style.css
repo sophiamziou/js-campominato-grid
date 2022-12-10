@@ -7,7 +7,7 @@
 
 .header{
     height: 80px;
-    color: rgba(46,243,207,255);
+    color: rgb(46,243,207);
 }
 
 
@@ -31,8 +31,16 @@ header .row{
     margin-bottom: 20px;
 }
 
-.m_10{
-    margin: 10px;
+.m_right{
+    margin-right: 30px;
+}
+
+button, select{
+    padding: 10px 15px;
+    background-color: rgb(46,243,207);
+    margin-right: 40px;
+    border: none;
+    border-radius: 10px;
 }
 
 .field{
