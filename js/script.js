@@ -22,34 +22,9 @@ for(let i=0; i < 100; i++){
     const currentSquare = createGridSquare(i+1);
     currentSquare.addEventListener('click', function(){
         this.classList.toggle('blue');
+        console.log(this.innerText)
     });
     grid.appendChild(currentSquare);
 }
-
-// // Bonus 
-
-// let option = document.getElementById("select");
-// function onChange() {
-//   let level = option.value;
-//   switch (level) {
-//     case '1' :
-//         console.log('hai scelto 1');
-//         return '10';
-
-//     case '2' :
-//         console.log('hai scelto 2');
-//         return '9';
-    
-//     case '3' :
-//         console.log('hai scelto 3');
-//         return '7';
-//     }
-// }
-
-// option.onchange = onChange;
-// onChange();
-
-// let row_cell = onChange();
-// console.log(row_cell);
 
 
