@@ -18,45 +18,40 @@ function createGridSquare(number){
 
 let grid = document.getElementById('field');
 
-let matrixLength;
+// Bonus 
+let row_cell;
 
-for(let i=0; i<matrixLength * matrixLength; i++){
+let option = document.getElementById("select");
+function onChange() {
+  let level = option.value;
+  switch (level) {
+    case '1' :
+        console.log('hai scelto 1');
+        row_cell = 10;
+        return row_cell;
+
+    case '2' :
+        console.log('hai scelto 2');
+        row_cell = 9;
+        return row_cell;
+    
+    case '3' :
+        console.log('hai scelto 3');
+        row_cell = 7;
+        return row_cell;
+    }
+  console.log(level)
+}
+
+option.onchange = onChange;
+onChange();
+
+console.log(row_cell)
+
+for(let i=0; i<row_cell * row_cell; i++){
     const currentSquare = createGridSquare(i+1);
     currentSquare.addEventListener('click', function(){
         this.classList.add('blue');
     });
     grid.appendChild(currentSquare);
 }
-
-// Bonus 
-
-// let select = document.getElementById("select");
-// let value = select.options[select.selectedIndex].value;
-// console.log(value);
-
-let option = document.getElementById("select");
-function onChange() {
-  let level = option.value;
-
-  switch (level) {
-    case 1 :
-        console.log('hai scelto 1');
-        break;
-
-    case 2 :
-        console.log('hai scelto 1');
-        break;
-    
-    case 3 :
-        console.log('hai scelto 1');
-        break;
-    
-    default:
-        console.log('hai scelto 1');
-}
-  console.log(level);
-}
-option.onchange = onChange;
-onChange();
-
-
