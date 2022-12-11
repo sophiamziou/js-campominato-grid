@@ -10,7 +10,7 @@ play.addEventListener('click', function(){
 function createGridSquare(number){
     const currentElement = document.createElement ('div')
     currentElement.classList.add('box')
-    currentElement.innerText = number+1;
+    currentElement.innerText = number;
     return currentElement;
 }
 
@@ -18,14 +18,45 @@ function createGridSquare(number){
 
 let grid = document.getElementById('field');
 
-for(let i=0; i<100; i++){
-    const currentSquare = createGridSquare(i);
+let matrixLength;
+
+for(let i=0; i<matrixLength * matrixLength; i++){
+    const currentSquare = createGridSquare(i+1);
     currentSquare.addEventListener('click', function(){
         this.classList.add('blue');
     });
     grid.appendChild(currentSquare);
 }
 
+// Bonus 
 
+// let select = document.getElementById("select");
+// let value = select.options[select.selectedIndex].value;
+// console.log(value);
+
+let option = document.getElementById("select");
+function onChange() {
+  let level = option.value;
+
+  switch (level) {
+    case 1 :
+        console.log('hai scelto 1');
+        break;
+
+    case 2 :
+        console.log('hai scelto 1');
+        break;
+    
+    case 3 :
+        console.log('hai scelto 1');
+        break;
+    
+    default:
+        console.log('hai scelto 1');
+}
+  console.log(level);
+}
+option.onchange = onChange;
+onChange();
 
 
