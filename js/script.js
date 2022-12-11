@@ -19,7 +19,6 @@ function createGridSquare(number){
 let grid = document.getElementById('field');
 
 // Bonus 
-let row_cell;
 
 let option = document.getElementById("select");
 function onChange() {
@@ -27,26 +26,24 @@ function onChange() {
   switch (level) {
     case '1' :
         console.log('hai scelto 1');
-        row_cell = 10;
-        return row_cell;
+        return '10';
 
     case '2' :
         console.log('hai scelto 2');
-        row_cell = 9;
-        return row_cell;
+        return '9';
     
     case '3' :
         console.log('hai scelto 3');
-        row_cell = 7;
-        return row_cell;
+        return '7';
     }
-  console.log(level)
 }
 
 option.onchange = onChange;
 onChange();
 
-console.log(row_cell)
+let row_cell = onChange();
+console.log(row_cell);
+
 
 for(let i=0; i<row_cell * row_cell; i++){
     const currentSquare = createGridSquare(i+1);
