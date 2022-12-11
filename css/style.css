@@ -43,14 +43,14 @@ button, select{
     border-radius: 10px;
 }
 
-.field{
+#field{
     border: solid 1px rgb(25,25,25);
     height: 650px;
     width: 650px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .box{
@@ -61,4 +61,10 @@ button, select{
     align-items: center;
     height: calc(100% / 10);
     width: calc(100% / 10);
+}
+
+.blue{
+    border: 1px solid rgb(46,243,207);
+    background-color: rgb(9,9,53);
+    color:  rgb(46,243,207);
 }

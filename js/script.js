@@ -6,15 +6,26 @@ play.addEventListener('click', function(){
 })
 
 // 2- creare la griglia 10x10 
-const container = document.querySelector('.field');
-for (i=0; i<100; i++){
-    let element;
-    element = `<div class="box">${i+1}</div>`;
-    container.innerHTML += element;
+
+function createGridSquare(number){
+    const currentElement = document.createElement ('div')
+    currentElement.classList.add('box')
+    currentElement.innerText = number+1;
+    return currentElement;
 }
 
 // 3- cliccando sulle celle si colorano e compare il numero in console
-const cell = document.getElementsByClassName("box");
-cell.addEventListener('click', function(){
-    cell.style.backgroundColor = "red";  
-})
+
+let grid = document.getElementById('field');
+
+for(let i=0; i<100; i++){
+    const currentSquare = createGridSquare(i);
+    currentSquare.addEventListener('click', function(){
+        this.classList.add('blue');
+    });
+    grid.appendChild(currentSquare);
+}
+
+
+
+
