@@ -37,15 +37,18 @@ function onChange() {
 
   switch (level) {
     case '1':
-        console.log('hai scelto 1');
+        console.log('hai scelto livello 1');
+        row_cell = 10
         break;
 
     case '2' :
-        console.log('hai scelto 2');
+        console.log('hai scelto livello 2');
+        row_cell = 9
         break;
 
     case '3' :
-        console.log('hai scelto 3');
+        console.log('hai scelto livello 3');
+        row_cell = 7
         break;
 
     default:
