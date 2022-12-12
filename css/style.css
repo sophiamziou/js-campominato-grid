@@ -43,6 +43,10 @@ button, select{
     border-radius: 10px;
 }
 
+h2{
+    text-align: center;
+}
+
 #field{
     border: solid 1px rgb(25,25,25);
     height: 650px;
@@ -59,8 +63,6 @@ button, select{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% / 10);
-    width: calc(100% / 10);
 }
 
 .blue{
