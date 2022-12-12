@@ -18,7 +18,9 @@ function createGridSquare(number){
 
 let grid = document.getElementById('field');
 
-for(let i=0; i < 100; i++){
+let row_cell;
+
+for(let i=0; i < row_cell * row_cell; i++){
     const currentSquare = createGridSquare(i+1);
     currentSquare.addEventListener('click', function(){
         this.classList.toggle('blue');
@@ -27,4 +29,29 @@ for(let i=0; i < 100; i++){
     grid.appendChild(currentSquare);
 }
 
+// Bonus 
 
+let option = document.getElementById("select");
+function onChange() {
+  let level = option.value;
+
+  switch (level) {
+    case '1':
+        console.log('hai scelto 1');
+        break;
+
+    case '2' :
+        console.log('hai scelto 2');
+        break;
+
+    case '3' :
+        console.log('hai scelto 3');
+        break;
+
+    default:
+        console.log('scegli livello');
+}
+  console.log(level);
+}
+option.onchange = onChange;
+onChange();
